@@ -1,10 +1,19 @@
 public class Objecto {
 
-    private String Nombre;
-    private String Tipo;
-    private String Descripcion;
-    private int Valor;
-    private int Coste;
+    String Nombre;
+    String Tipo;
+    String Descripcion;
+    int Valor;
+    int Coste;
+
+    public Objeto(String nombre, String tipo, String descripcion, int valor, int coste) {
+        this.Nombre = nombre;
+        this.Tipo = tipo;
+        this.Descripcion = descripcion;
+        this.Valor = valor;
+        this.Coste = coste;
+
+    }
 
     public double getNom() {
 

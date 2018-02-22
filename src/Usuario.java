@@ -1,11 +1,24 @@
 public class Usuario {
 
-    private String Nombre;
-    private String Password;
-    private int Vida;
-    private int Ataque;
-    private int Defensa;
-    private int Resistencia;
+    String Nombre;
+    String Password;
+    int Vida;
+    int Ataque;
+    int Defensa;
+    int Resistencia;
+
+
+
+    public Usuario(String nombre, String password,int vida, int ataque, int defensa, int resistencia){
+        this.Nombre = nombre;
+        this.Password = password;
+        this.Vida = vida;
+        this.Ataque = ataque;
+        this.Defensa = defensa;
+        this.Resistencia = resistencia;
+    }
+
+
 
     public double getNom() {
 
