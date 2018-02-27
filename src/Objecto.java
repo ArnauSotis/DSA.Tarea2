@@ -1,67 +1,133 @@
-public class Objecto {
+public class Objeto {
 
-    String Nombre;
-    String Tipo;
-    String Descripcion;
-    int Valor;
-    int Coste;
+
+
+   private String Nombre;
+
+    private String Tipo;
+
+    private String Descripcion;
+
+    private int Valor;
+
+   private int Coste;
+
+
 
     public Objeto(String nombre, String tipo, String descripcion, int valor, int coste) {
+
         this.Nombre = nombre;
+
         this.Tipo = tipo;
+
         this.Descripcion = descripcion;
+
         this.Valor = valor;
+
         this.Coste = coste;
 
+
+
     }
 
-    public double getNom() {
+
+
+    public String getNombre() {
+
+
 
         return Nombre;
+
     }
 
-    public void setNom(String Nom) {
+
+
+    public void setNombre(String Nom) {
+
+
 
         this.Nombre = Nom;
+
     }
 
-    public double getTipo() {
+
+
+    public String getTipo() {
+
+
 
         return Tipo;
+
     }
+
+
 
     public void setTipo(String Tip) {
 
+
+
         this.Tipo = Tip;
+
     }
 
-    public double getDescripcion() {
+
+
+    public String getDescripcion() {
+
+
 
         return Descripcion;
+
     }
+
+
 
     public void setDescripcion(String Des) {
 
+
+
         this.Descripcion = Des;
+
     }
+
+
 
     public double getValor() {
 
+
+
         return Valor;
+
     }
+
+
 
     public void setValor(int valor) {
 
+
+
         this.Valor = valor;
+
     }
+
+
 
     public double getCoste() {
 
+
+
         return Coste;
+
     }
+
+
 
     public void setCoste(int coste) {
 
+
+
         this.Coste = coste;
+
     }
+
 }
