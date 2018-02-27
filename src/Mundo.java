@@ -70,7 +70,7 @@ public class Mundo {
 
             for(int i=0;i<usuarioList.size();i++)
             {
-                if(usuarioList.get(i)==u)
+                if(usuarioList.get(i) == u)
                 {
                    usuarioList.get(i).objetoList.add(o);
                 }
