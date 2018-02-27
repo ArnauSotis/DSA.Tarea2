@@ -88,16 +88,16 @@ public class Main {
                     }
                     System.out.println(u.toString());
                 }
-                case 4:{
+                case 4: {
                     System.out.print("Nombre de usuario a añadir el objeto: ");
                     String nombre = scan.nextLine();
                     Usuario u = mun.consultarUsuario(nombre);
-                    if(u == null){
+                    if (u == null) {
                         System.out.println("Usuario no existente");
                         break;
                     }
                     System.out.print("Objeto que desea añadir");
-                    String objeto =scan.nextLine();
+                    String objeto = scan.nextLine();
                     String Tipo;
                     String Descripcion;
                     int valor;
@@ -113,11 +113,67 @@ public class Main {
                     System.out.print("Coste: ");
                     String cost = scan.nextLine();
                     coste = Integer.parseInt(cost);
-                    Objeto o=new Objeto(objeto, Tipo, Descripcion, valor, coste);
+                    Objeto o = new Objeto(objeto, Tipo, Descripcion, valor, coste);
 
-                    mun.añadirObjetoAUsuario( u, o);
-                        System.out.println("Realizado con exito");
-                        break;
+                    mun.añadirObjetoAUsuario(u, o);
+                    System.out.println("Realizado con exito");
+                    break;
+                }
+                case 5: {
+                    System.out.print("Nombre de usuario: ");
+                    String nombre = scan.nextLine();
+                    Usuario u = mun.consultarUsuario(nombre);
+                    System.out.print("Objeto que quieres consultar: ");
+                    String object = scan.nextLine();
+                    mun.consultarObjetoDeUsuario(u,object);
+                    break;
+                }
+                case 6: {
+                    System.out.print("Nombre de usuario: ");
+                    String nombre = scan.nextLine();
+                    Usuario u = mun.consultarUsuario(nombre);
+                    System.out.print("Objeto que quieres eliminar: ");
+                    String object = scan.nextLine();
+                    if(mun.eliminarObjetosDeUsuario(u,object) == true)
+                        System.out.println("Objeto transferido correctamente");
+                    else
+                        System.out.println("El usuario origen/destino no existe o el objecto no existe");
+                    break;
+                }
+                case 7: {
+                    System.out.print("Nombre del usuario origen del objeto : ");
+                    String nomo = scan.nextLine();
+                    Usuario uo = mun.consultarUsuario(nomo);
+                    System.out.print("Nombre del usuario destino del objeto: ");
+                    String nomd = scan.nextLine();
+                    Usuario ud = mun.consultarUsuario(nomd);
+
+                    System.out.print("Objeto que deseas transferir");
+                    String objeto = scan.nextLine();
+                    String Tipo;
+                    String Descripcion;
+                    int valor;
+                    int coste;
+
+                    System.out.print("Tipo: ");
+                    Tipo = scan.nextLine();
+                    System.out.print("Descripcion: ");
+                    Descripcion = scan.nextLine();
+                    System.out.print("Valor: ");
+                    String val = scan.nextLine();
+                    valor = Integer.parseInt(val);
+                    System.out.print("Coste: ");
+                    String cost = scan.nextLine();
+                    coste = Integer.parseInt(cost);
+                    Objeto obj = new Objeto(objeto, Tipo, Descripcion, valor, coste);
+
+                    if(mun.transferirObjetoEntreUsuarios(uo, ud, obj) == true)
+                        System.out.println("Objeto transferido correctamente");
+                    else
+                        System.out.println("El usuario origen/destino no existe o el objecto no existe");
+                    break;
+
+                }
 
             }
         }

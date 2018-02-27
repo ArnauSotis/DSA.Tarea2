@@ -119,10 +119,13 @@ public class Mundo {
         return false;
     }
 
-    public void transferirObjetoEntreUsuarios(Usuario origen, Usuario destino, Objeto o)
+    public boolean transferirObjetoEntreUsuarios(Usuario origen, Usuario destino, Objeto o)
     {
+        //he cambiado un void por el boolean para poder enviar un true o un false para ver si se ha transferido correctamente el objeto.
+        int transf=0;
         for(int i=0;i<usuarioList.size();i++)
         {
+
             if(usuarioList.get(i)==origen)
             {
                 for(int j=0;j<usuarioList.size();j++)
@@ -131,6 +134,7 @@ public class Mundo {
                     {
                         usuarioList.get(j).objetoList.add(o);
                         usuarioList.get(i).objetoList.remove(o);
+                        transf=1;
 
                     }
 
@@ -139,6 +143,10 @@ public class Mundo {
             }
 
         }
+        if(transf==0)
+            return false;
+        else
+            return true;
 
 
     }
