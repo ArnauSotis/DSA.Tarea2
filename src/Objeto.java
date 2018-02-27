@@ -2,7 +2,7 @@ public class Objeto {
 
 
 
-   private String Nombre;
+    private String Nombre;
 
     private String Tipo;
 
@@ -10,7 +10,7 @@ public class Objeto {
 
     private int Valor;
 
-   private int Coste;
+    private int Coste;
 
 
 
