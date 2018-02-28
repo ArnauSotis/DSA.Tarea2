@@ -34,23 +34,37 @@ public class Objeto {
 
     public String getNombre() {
 
+
+
         return Nombre;
 
     }
 
+
+
     public void setNombre(String Nom) {
+
+
 
         this.Nombre = Nom;
 
     }
 
+
+
     public String getTipo() {
+
+
 
         return Tipo;
 
     }
 
+
+
     public void setTipo(String Tip) {
+
+
 
         this.Tipo = Tip;
 
@@ -60,6 +74,8 @@ public class Objeto {
 
     public String getDescripcion() {
 
+
+
         return Descripcion;
 
     }
@@ -67,6 +83,8 @@ public class Objeto {
 
 
     public void setDescripcion(String Des) {
+
+
 
         this.Descripcion = Des;
 
@@ -76,6 +94,8 @@ public class Objeto {
 
     public double getValor() {
 
+
+
         return Valor;
 
     }
@@ -83,6 +103,8 @@ public class Objeto {
 
 
     public void setValor(int valor) {
+
+
 
         this.Valor = valor;
 
@@ -92,6 +114,8 @@ public class Objeto {
 
     public double getCoste() {
 
+
+
         return Coste;
 
     }
@@ -99,6 +123,8 @@ public class Objeto {
 
 
     public void setCoste(int coste) {
+
+
 
         this.Coste = coste;
 

@@ -31,22 +31,17 @@ public class Mundo {
    }
 
     public boolean eliminarUsuario(String nombre) {
-        int encontrado = 0;
 
-        for (int i = 0; i<usuarioList.size();i++)
-        {
-            if(usuarioList.get(i).getNom()==nombre)
-            {
+        for (int i = 0; i<usuarioList.size();i++) {
+            if (usuarioList.get(i).getNom().equals(nombre)) {
                 usuarioList.remove(i);
-                encontrado=1;
+                return true;
             }
 
-
         }
-        if(encontrado==0)
-            return false;
-        else
-            return true;
+
+        return false;
+
     }
 
     public Usuario consultarUsuario(String nombre){
@@ -54,7 +49,7 @@ public class Mundo {
        int i=0;
        while(i<usuarioList.size()&&encontrado==0)
         {
-                if (usuarioList.get(i).getNom() == nombre) {
+                if (usuarioList.get(i).getNom().equals(nombre)) {
                     encontrado=1;
                 }
                 i++;
@@ -107,7 +102,7 @@ public class Mundo {
             if(usuarioList.get(i)==u)
             {
                 for(int j=0;j<usuarioList.get(i).objetoList.size();j++) {
-                    if(usuarioList.get(i).objetoList.get(j).getNombre()==nombreObjeto)
+                    if(usuarioList.get(i).objetoList.get(j).getNombre().equals(nombreObjeto))
                     {
                         usuarioList.get(i).objetoList.remove(j);
                         return true;

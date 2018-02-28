@@ -15,17 +15,12 @@ public class Main {
             System.out.println("5 : Consultar Objeto de un Usuario");
             System.out.println("6 : Eliminar Objetos de un Usuario");
             System.out.println("7 : Tranferir un Objeto entre Usuarios");
-            System.out.println("0 : Salir de la Aplicación");
+            System.out.println("0 : Salir de la Aplicación\n");
 
             String input = scan.nextLine();
             int choice = 0;
-            try {
-                choice = Integer.parseInt(input);
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                choice = -1;
-            }
+            choice = Integer.parseInt(input);
+
             switch (choice) {
                 case -1: {
                     System.out.println("Numero inválido");
@@ -178,5 +173,4 @@ public class Main {
             }
         }
     }
-}
 }
