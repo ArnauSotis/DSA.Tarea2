@@ -44,21 +44,16 @@ public class Mundo {
 
     }
 
-    public Usuario consultarUsuario(String nombre){
-       int encontrado=0;
+    public Usuario consultarUsuario(String nombre) {
        int i=0;
-       while(i<usuarioList.size()&&encontrado==0)
+       while(i<usuarioList.size())
         {
                 if (usuarioList.get(i).getNom().equals(nombre)) {
-                    encontrado=1;
+                    return usuarioList.get(i);
                 }
                 i++;
         }
-        if (encontrado==0)
-            return null;
-        else
-            return usuarioList.get(i);
-
+        return null;
     }
 
     public void añadirObjetoAUsuario(Usuario u, Objeto o){

@@ -30,7 +30,15 @@ public class Objeto {
 
     }
 
+    public void mostrarPorPantalaObjeto() {
+        System.out.println("NOMBRE: "+getNombre());
+        System.out.println("Tipo: "+getTipo());
+        System.out.println("Descripcion: "+getDescripcion());
+        System.out.println("Valor: "+getValor());
+        System.out.println("Coste: "+getCoste());
 
+
+    }
 
     public String getNombre() {
 

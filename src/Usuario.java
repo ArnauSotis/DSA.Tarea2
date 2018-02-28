@@ -22,6 +22,16 @@ public class Usuario {
     }
 
 
+    public void mostrarPorPantala() {
+        System.out.println("NOMBRE: "+getNom());
+        System.out.println("CONTRASEÑA: "+getPass());
+        System.out.println("VIDA: "+getVida());
+        System.out.println("ATAQUE: "+getAtaque());
+        System.out.println("DEFENSA: "+getDefensa());
+        System.out.println("RESISTENCIA: "+getResistencia());
+
+
+    }
 
     public String getNom() {
 

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.*;
 
 public class Main {
 
@@ -37,7 +38,7 @@ public class Main {
                     int Vida = 0;
                     int ataque = 0;
                     int defensa = 0;
-                    int resistencia= 0;
+                    int resistencia = 0;
                     while (true) {
                         try {
                             System.out.print("Vida: ");
@@ -67,7 +68,7 @@ public class Main {
                 case 2: {
                     System.out.print("Nombre de usuario que desea eliminar eliminar: ");
                     String nombre = scan.nextLine();
-                    if(mun.eliminarUsuario(nombre) == true)
+                    if (mun.eliminarUsuario(nombre) == true)
                         System.out.println("Usuario eliminado");
                     else
                         System.out.println("El usuario que desea eliminar no existe");
@@ -77,12 +78,15 @@ public class Main {
                     System.out.print("Nombre de usuario a consultar: ");
                     String nombre = scan.nextLine();
                     Usuario u = mun.consultarUsuario(nombre);
-                    if(u == null){
+                    if (u == null) {
                         System.out.println("Usuario no existente");
-                        break;
-                    }
-                    System.out.println(u.toString());
-                }
+                    } else
+                        u.mostrarPorPantala();
+
+                    break;
+
+
+            }
                 case 4: {
                     System.out.print("Nombre de usuario a añadir el objeto: ");
                     String nombre = scan.nextLine();
@@ -91,7 +95,7 @@ public class Main {
                         System.out.println("Usuario no existente");
                         break;
                     }
-                    System.out.print("Objeto que desea añadir");
+                    System.out.print("Objeto que desea añadir: ");
                     String objeto = scan.nextLine();
                     String Tipo;
                     String Descripcion;
@@ -120,7 +124,13 @@ public class Main {
                     Usuario u = mun.consultarUsuario(nombre);
                     System.out.print("Objeto que quieres consultar: ");
                     String object = scan.nextLine();
-                    mun.consultarObjetoDeUsuario(u,object);
+                    Objeto j = mun.consultarObjetoDeUsuario(u,object);
+                    if (j == null) {
+                        System.out.println("Objeto no existente");
+                    }
+                    else
+                        j.mostrarPorPantalaObjeto();
+
                     break;
                 }
                 case 6: {
