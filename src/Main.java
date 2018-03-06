@@ -4,6 +4,8 @@ import java.lang.*;
 public class Main {
 
     public static Mundo mun = new Mundo();
+    public static Escenario esce = new Escenario();
+
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -16,6 +18,7 @@ public class Main {
             System.out.println("5 : Consultar Objeto de un Usuario");
             System.out.println("6 : Eliminar Objetos de un Usuario");
             System.out.println("7 : Tranferir un Objeto entre Usuarios");
+            System.out.println("8 : Crear Escenario");
             System.out.println("0 : Salir de la Aplicación\n");
 
             String input = scan.nextLine();
@@ -173,11 +176,19 @@ public class Main {
                     Objeto obj = new Objeto(objeto, Tipo, Descripcion, valor, coste);
 
                     if(mun.transferirObjetoEntreUsuarios(uo, ud, obj) == true)
-                        System.out.println("Objeto transferido correctamente");
+                        System.out.println("Objeto transferido correctamente\n");
                     else
-                        System.out.println("El usuario origen/destino no existe o el objecto no existe");
+                        System.out.println("El usuario origen/destino no existe o el objecto no existe\n");
                     break;
 
+                }
+                case 8:{
+                    System.out.print("Nombre para el escenario : ");
+                    String esc = scan.nextLine();
+                    System.out.print("Descripción  : ");
+                    String des = scan.nextLine();
+                    esce.pintar (esc,des);
+                    break;
                 }
 
             }

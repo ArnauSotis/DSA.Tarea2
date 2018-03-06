@@ -4,10 +4,10 @@ public class Escenario {
     String nombre;
     String descripcion;
 
-
-    public void pintar(){
-
+    public void pintar(String nombre, String descripcion){
+        this.nombre = nombre;
+        this.descripcion= descripcion;
     }
 
-    
+
 }
