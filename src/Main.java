@@ -140,9 +140,9 @@ public class Main {
                     System.out.print("Objeto que quieres eliminar: ");
                     String object = scan.nextLine();
                     if(mun.eliminarObjetosDeUsuario(u,object) == true)
-                        System.out.println("Objeto transferido correctamente");
+                        System.out.println("Objeto eliminado correctamente");
                     else
-                        System.out.println("El usuario origen/destino no existe o el objecto no existe");
+                        System.out.println("El objeto no existe");
                     break;
                 }
                 case 7: {

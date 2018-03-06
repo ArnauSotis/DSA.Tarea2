@@ -80,7 +80,7 @@ public class Mundo {
             if(usuarioList.get(i)==u)
             {
                 for(int j=0;j<usuarioList.get(i).objetoList.size();j++)
-                    if(usuarioList.get(i).objetoList.get(j).getNombre()==nombreObjeto)
+                    if(usuarioList.get(i).objetoList.get(j).getNombre().equals(nombreObjeto))
                     {
                         return usuarioList.get(i).objetoList.get(j);
                     }
